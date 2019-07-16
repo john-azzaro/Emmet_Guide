@@ -52,6 +52,27 @@
 
 
 
+<!--To add multiple classes, use dot-notation to add additional classes to your element-->
+    p.myClass.secondClass.thirdClass
+<!--Result-->
+    <p class="myClass secondClass thirdClass"></p>
+
+
+
+<!--To create a single element and an ID, use hashtag (i.e. #)-->
+    p#myId    
+<!--Result-->
+    <p id="myId"></p>
+
+
+
+<!--To add a custom attribute, use square brackets (i.e. [...] )-->
+    p.myClass[colspan="3"]
+<!--Result-->
+    <p class="myClass" colspan="3"></p>
+
+    
+
 <!--To create an element with text, use brackets after tag (i.e. {...} )-->
     p{this is some text}
 <!--Result-->    
@@ -84,17 +105,19 @@
 
 
 <!--To "climb-up", use the carot operator (i.e. ^) before the element you want to "climb-up" one level of the tree and change the context where the elements should appear-->
-    div>ul>li
-<!--Result without "climb-up"-->
-    <div>
-        <ul>
-            <li></li>
-        </ul>
-    </div>
+    
+    <!--Result without "climb-up"-->
+        div>ul>li
+    <!--Result-->
+        <div>
+            <ul>
+                <li></li>
+            </ul>
+        </div>
 
     <!--Result with a single climb-up-->
         div>ul>li^p
-        <!--Result-->
+    <!--Result-->
         <div>
             <ul>
                 <li></li>
@@ -104,6 +127,7 @@
 
     <!--Result with a double climb-up-->
         div>ul>li^^p
+    <!--Result-->    
         <div>
             <ul>
                 <li></li>
@@ -113,9 +137,13 @@
 
 
 
-<!--To group elements in a subtree (i.e. nest given elements within an element)-->
-    nav
-
+<!--To group elements in a subtree, following the ">" operator wrap your nested subtree in parentheses (i.e. (...) )-->
+        
+    <!--Example 1 (creating a single subtree navigation)-->
+        nav>div.logo+(ul>li)
+    <!--Result-->
+        
+    
 
 
 
