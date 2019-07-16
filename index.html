@@ -12,8 +12,9 @@
 </head>
 <body>
 
+<!--------------------------------------Boilerplate------------------------------------------------>  
 <!--To start an HTML 5 document-->   
-    html:5
+    html:5 (or) !
 <!--Result-->
     <!DOCTYPE html>
     <html lang="en">
@@ -30,6 +31,97 @@
 
 
 <br><br><br>
+
+
+<!--------------------------------------BASICS------------------------------------------------>
+
+<!--To create a single element, simply write the element tag and press enter(or tab)-->
+    p
+<!--Result-->
+    <p></p>
+
+
+
+<!--To create a single element and a CLASS, use dot notation after tag (i.e. .class)-->
+    p.myclass
+<!--Result-->
+    <p class="myclass"></p>
+
+
+
+<!--To create an element with text, use brackets after tag (i.e. {...} )-->
+    p{this is some text}
+<!--Result-->    
+    <p>this is some text</p>
+
+
+
+<!--To create a sibling, use "+" between tags (i.e. make more than one element)-->
+    p+p+p
+<!--Result-->    
+    <p></p>
+    <p></p>
+    <p></p>
+
+
+
+<!--To create a child, use ">" (i.e. create a nested element) where descending down the generated treeand positions of all sibling elements are resolved against the deepest element-->
+    ul>li
+<!--Result-->
+    <ul>
+        <li></li>
+    </ul>
+
+
+
+<!--To "climb-up", use the carot operator (i.e. ^) before the element you want to "climb-up" one level of the tree and change the context where the elements should appear-->
+    div>ul>li
+<!--Result without "climb-up"-->
+    <div>
+        <ul>
+            <li></li>
+        </ul>
+    </div>
+
+    <!--Result with a single climb-up-->
+        div>ul>li^p
+        <!--Result-->
+        <div>
+            <ul>
+                <li></li>
+            </ul>
+            <p></p>
+        </div>
+
+    <!--Result with a double climb-up-->
+        div>ul>li^^p
+        <div>
+            <ul>
+                <li></li>
+            </ul>
+        </div>
+        <p></p>
+
+
+
+
+
+
+
+
+
+
+
+    <br><br><br>
+<!-------------------------------Complex Examples----------------------------------------->
+
+
+
+
+
+
+
+
 
 
 <!--To make a basic header-->
